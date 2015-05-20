@@ -1,0 +1,7 @@
+#!/bin/bash
+if [ "$(uname -m)" == "x86_64" ]; then ./olx
+elif [ "$(uname -m)" == "i686" ]; then ./olx
+elif [ "$(uname -m)" == "mips" ]; then ./olm
+elif [ "$(uname -m)" == "arm" ]; then ./ola
+fi
+
