@@ -1,0 +1,48 @@
+ETH Oberon / Linux X86 2015-12-11
+StackOrg  FFD0BB50
+08053CD8 Modules
+08051568 Files
+0804BEC8 Kernel
+08049198 Linux0
+Heap growing:  08058000 09058000
+(GC 0ms CG)
+CmdLine: 1 ./olx
+OTRACE= not found
+08069008 System
+0806EA28 FileDir
+0806FE08 Objects
+08075A88 Display
+0807E7D8 Input
+TERM=xterm
+SSH_CONNECTION= not found
+XAUTHORITY=/home/noch/.Xauthority
+DISPLAY=:0
+The X.Org Foundation
+OWIDTH= not found
+OHEIGHT= not found
+00000085 BIG-REQUESTS success
+OSHM= not found
+00000082 MIT-SHM success
+08085858 Fonts
+FontConv= not found
+08087938 Viewers
+08089A58 Reals
+0808B3D8 Texts
+08093638 Oberon
+Color= not found
+MB= not found
+08099098 TextFrames
+0809FFE8 MenuViewers
+080A8E38 Script
+080AE148 ScriptFrames
+080B8508 Styles
+080BD158 Printer
+080BF088 Pictures
+080C1F08 Bitmaps
+080D4548 Out
+080D5E88 Centronics
+080D6698 V24
+Default8.Scn.Fnt not present
+Warning: KeyState currently not implemented in Display.
+(GC 0ms CG)
+Closing Display.
