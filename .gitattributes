@@ -1,2 +1,2 @@
-*.Mod text
+*.Mod text eol=cr
 * text=auto eol=cr
