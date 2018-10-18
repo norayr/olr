@@ -1,1 +1,2 @@
-*.Mod diff
+*.Mod text
+* text=auto eol=cr
