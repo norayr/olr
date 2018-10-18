@@ -1,2 +1,4 @@
 *.Mod text eol=cr
+*.Tool text eol=cr
+*.Text text eol=cr
 * text=auto eol=cr
