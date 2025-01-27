@@ -1,18 +1,18 @@
 ETH Oberon / Linux X86 2015-12-11
-StackOrg  FFE5E190
-08053CD8 Modules
-08051568 Files
-0804BEC8 Kernel
-08049198 Linux0
-Heap growing:  08974000 09974000
+StackOrg  FFD02410
+08053EF8 Modules
+08051788 Files
+0804C0E8 Kernel
+080491B8 Linux0
+Heap growing:  0A055000 0B055000
 (GC 0ms CG)
 CmdLine: 1 ./olx
 OTRACE= not found
-08985008 System
-0898AA28 FileDir
-0898BE08 Objects
-08991A88 Display
-0899A7D8 Input
+0A066008 System
+0A06BA28 FileDir
+0A06CE08 Objects
+0A072A88 Display
+0A07B7D8 Input
 TERM=xterm
 SSH_CONNECTION= not found
 XAUTHORITY=/u/inky/.Xauthority
@@ -23,81 +23,28 @@ OHEIGHT=1300
 00000085 BIG-REQUESTS success
 OSHM= not found
 00000082 MIT-SHM success
-089A0518 Fonts
+0A081518 Fonts
 FontConv= not found
-089A25F8 Viewers
-089A4718 Reals
-089A6098 Texts
-089AE2F8 Oberon
+0A0835F8 Viewers
+0A085718 Reals
+0A087098 Texts
+0A08F2F8 Oberon
 Color= not found
 MB= not found
-089B42B8 TextFrames
-089BB208 MenuViewers
-089C5F58 Script
-089CB268 ScriptFrames
-089D5628 Styles
-089DA278 Printer
-089DC1A8 Pictures
-089DF028 Bitmaps
-089F1668 Out
-089F2FA8 Centronics
-089F37B8 V24
+0A0952B8 TextFrames
+0A09C208 MenuViewers
+0A0A7058 Script
+0A0AC368 ScriptFrames
+0A0B6718 Styles
+0A0BB358 Printer
+0A0BD288 Pictures
+0A0C0108 Bitmaps
+0A0D2788 Out
+0A0D40C8 Centronics
+0A0D48D8 V24
 Default8.Scn.Fnt not present
 Warning: KeyState currently not implemented in Display.
-(GC 1ms CG)
-089FF078 XBrowser
-08A01728 OPM
-08A04A68 OPS
-08A08498 OPT
-08A148C8 OPV
-08A1B7E8 OPL
-08A454D8 OPO
-08A52EA8 OPC
 (GC 0ms CG)
-(GC 0ms CG)
-08A65248 Edit
-XBrowser.Mod not present
-(GC 0ms CG)
-OLR not present
-(GC 0ms CG)
-OLR not present
-(GC 0ms CG)
-(GC 1ms CG)
-x86/RecType.Obj not present
-Modules: x86/RecType.Obj not found
-(GC 1ms CG)
-mremap:  00001000 00000001 08B94000
-mremap:  00002000 00000001 08B94000
-08A68F48 XCompiler
-08A6F118 OPP
-08A7A3B8 OPB
-08A84D58 OPA
-(GC 0ms CG)
-(GC 0ms CG)
-mremap:  00001000 00000001 08C26000
-mremap:  00002000 00000001 08C29000
-(GC 1ms CG)
-x86/Linux0Module.Obj not present
-(GC 1ms CG)
-mremap:  00001000 00000001 08C2D000
-(GC 1ms CG)
-(GC 1ms CG)
-(GC 1ms CG)
-08AFE698 XBrowser
-(GC 1ms CG)
-(GC 1ms CG)
-(GC 1ms CG)
-mremap:  00001000 00000001 08C3A000
-mremap:  00002000 00000001 08C3A000
-(GC 1ms CG)
-(GC 1ms CG)
-(GC 1ms CG)
-mremap:  00001000 00000001 08C4B000
-mremap:  00002000 00000001 08C4B000
-(GC 1ms CG)
-(GC 0ms CG)
-mremap:  00001000 00000001 08CBC000
-mremap:  00002000 00000001 08CBF000
-(GC 1ms CG)
-08A8E158 XBrowser
+0A070128 Client
+0A078838 Internet
 (GC 0ms CG)

@@ -3,8 +3,8 @@
 Copyright 1997 Team of the Institute of Computer Systems of ETH Zuerich,
 ETH Center, CH-8092 Zuerich, e-mail: oberon@inf.ethz.ch.
 
-This module may be used under the conditions of the general Oberon 
-System 3 license contract.  The full text can be requested from the 
+This module may be used under the conditions of the general Oberon
+System 3 license contract.  The full text can be requested from the
 above-mentioned address, or downloaded from
 
   "ftp://ftp.inf.ethz.ch/pub/software/Oberon/System3/license.txt;A"
@@ -14,7 +14,7 @@ the interface of this module in any way that disagrees with the style
 or content of the system and (b) requested to provide all conversions
 of the source code to another platform with the name OBERON. *)
 
-MODULE Linux0;  
+MODULE Linux0;
 
 (* Linux kernel interface for X86 *)
 (*
@@ -25,7 +25,7 @@ MODULE Linux0;
   2016-10-16  -connect inlined
 
   Syscall numbers are in /usr/src/linux/arch/x86/syscalls/syscall_32.tbl
-  /usr/include/x86_64-linux-gnu/asm/unistd_32.h 
+  /usr/include/x86_64-linux-gnu/asm/unistd_32.h
   /usr/include/x86_64-linux-gnu/asm/unistd_64.h
 
 Calling could also be done this way:
@@ -41,7 +41,7 @@ CODE {SYSTEM.i386}
   INT  80H
 END Openat0;
 *)
-  
+
 IMPORT SYSTEM;
 
 CONST
@@ -50,7 +50,7 @@ CONST
   ObjTag*=0AFX;  (* x86: 0AFX; arml: 0F5X; arm: 36FBH; mips: 36F9H; mipst: 36FAH *)
   RegSize*=32;
   PageSize*=1000H;
-    
+
   (* OLR start *)
     VMIN*= 6;
     TCGETS*= 5401H;
@@ -91,7 +91,7 @@ CONST
     IGNSigs*={ SIGWINCH, SIGSTOP, SIGCONT, SIGKILL, SIGCHLD};  (* Ignore *)
     QUITSigs*={ SIGPIPE, SIGHUP, SIGTSTP, SIGQUIT, SIGTERM};        (* Quit *)
     TRAPSigs*= -{} -IGNSigs-QUITSigs ;  (* Trap *)
-    
+
     TimeAdjust=1;
 
     ATFDCWD*=-100;  (* use current directory *)
@@ -105,7 +105,6 @@ CONST
    SYSACCEPT= 5;
    SYSRECV= 8;
    SYSSEND= 9;
-
 
 
   (** Open( .. ) flags*)(* same on ARM, MIPS, x86 *)
@@ -133,7 +132,7 @@ TYPE
     fpstate: LONGINT;  (* don't make it POINTER TO FPUStateDesc because we would get problems with GC *)
     oldmask, cr2*: LONGINT;
   END;
-  
+
   SigHandler*= PROCEDURE( );
   SigAction* = RECORD
     handler: SigHandler;
@@ -163,9 +162,9 @@ TYPE
 VAR StackOrg*: LONGINT;  (** highest address on stack (single-process system) *)
   break* : BOOLEAN;  (** has ctrl-break been pressed? *)
   inGC*: BOOLEAN;  (** executing inside GC? *)
-
 (* Networking Procedures *)
-PROCEDURE -bind(sockfd, addr, addrlen: LONGINT): LONGINT;
+
+PROCEDURE -bind(addrlen, addr, sockfd: LONGINT): LONGINT;
 CODE {SYSTEM.i386}
   MOV  EAX, SOCKETCALL
   MOV  EBX, SYSBIND
@@ -173,38 +172,38 @@ CODE {SYSTEM.i386}
   INT  80H
 END bind;
 
-PROCEDURE Bind0*(sockfd, addr, addrlen: LONGINT): LONGINT;
+PROCEDURE Bind0*(sockfd, addrPtr, addrLen: LONGINT): LONGINT;
 BEGIN
-  RETURN bind(sockfd, addr, addrlen);
+  RETURN bind(addrLen, addrPtr, sockfd);
 END Bind0;
 
-PROCEDURE -listen(sockfd, backlog: LONGINT): LONGINT;
+PROCEDURE -listen(backlog, sockfd: LONGINT): LONGINT;
 CODE {SYSTEM.i386}
-  MOV  EAX, SOCKETCALL
-  MOV  EBX, SYSLISTEN
-  MOV  ECX, ESP  (* Parameters directly from the stack *)
-  INT  80H
+  MOV EAX, SOCKETCALL
+  MOV EBX, SYSLISTEN
+  MOV ECX, ESP          (* pointer to [sockfd, backlog] *)
+  INT 80H
 END listen;
 
 PROCEDURE Listen0*(sockfd, backlog: LONGINT): LONGINT;
 BEGIN
-  RETURN listen(sockfd, backlog);
+  RETURN listen(backlog, sockfd);
 END Listen0;
 
-PROCEDURE -accept(sockfd, addr, addrlen: LONGINT): LONGINT;
+PROCEDURE -accept(addrLenPtr, addrPtr, sockfd: LONGINT): LONGINT;
 CODE {SYSTEM.i386}
-  MOV  EAX, SOCKETCALL
-  MOV  EBX, SYSACCEPT
-  MOV  ECX, ESP  (* Parameters directly from the stack *)
-  INT  80H
+  MOV EAX, SOCKETCALL
+  MOV EBX, SYSACCEPT
+  MOV ECX, ESP          (* pointer to [sockfd, addrPtr, addrLenPtr] *)
+  INT 80H
 END accept;
 
-PROCEDURE Accept0*(sockfd, addr, addrlen: LONGINT): LONGINT;
+PROCEDURE Accept0*(sockfd, addrPtr, addrLenPtr: LONGINT): LONGINT;
 BEGIN
-  RETURN accept(sockfd, addr, addrlen);
+  RETURN accept(addrLenPtr, addrPtr, sockfd);
 END Accept0;
 
-PROCEDURE -recv(sockfd, buf, len, flags: LONGINT): LONGINT;
+PROCEDURE -recv(flags, len, buf, sockfd: LONGINT): LONGINT;
 CODE {SYSTEM.i386}
   MOV  EAX, SOCKETCALL
   MOV  EBX, SYSRECV
@@ -214,10 +213,10 @@ END recv;
 
 PROCEDURE Recv0*(sockfd, buf, len, flags: LONGINT): LONGINT;
 BEGIN
-  RETURN recv(sockfd, buf, len, flags);
+  RETURN recv(flags, len, buf, sockfd);
 END Recv0;
 
-PROCEDURE -send(sockfd, buf, len, flags: LONGINT): LONGINT;
+PROCEDURE -send(flags, len, buf, sockfd: LONGINT): LONGINT;
 CODE {SYSTEM.i386}
   MOV  EAX, SOCKETCALL
   MOV  EBX, SYSSEND
@@ -227,7 +226,7 @@ END send;
 
 PROCEDURE Send0*(sockfd, buf, len, flags: LONGINT): LONGINT;
 BEGIN
-  RETURN send(sockfd, buf, len, flags);
+  RETURN send(flags, len, buf, sockfd);
 END Send0;
 (* end of network procedures *)
 
@@ -241,7 +240,7 @@ CODE {SYSTEM.i386}
 (*  MOV  EBX, status[ EBP]*)
   INT  80H
 END Exit0;
-  
+
 PROCEDURE Fork0*():LONGINT;
 CONST FORK= 2; VFORK=190;
 CODE {SYSTEM.i386}
@@ -406,7 +405,7 @@ CODE {SYSTEM.i386}
   PUSH  EDI
   MOV  EAX, MMAP2
   MOV  EBX, adr[ EBP]
-  MOV  ECX, len[ EBP]    
+  MOV  ECX, len[ EBP]
   MOV  EDX, prot[ EBP]
   MOV  ESI, flags[ EBP]
   MOV  EDI, fd[ EBP]
@@ -553,7 +552,7 @@ CODE {SYSTEM.i386}
 END GetDents0;
 
 PROCEDURE socket( protocol, type, domain: LONGINT): LONGINT;
-CONST  
+CONST
   SOCKETCALL= 102;
   SYSSOCKET= 1;
 CODE {SYSTEM.i386}
@@ -572,7 +571,7 @@ PROCEDURE connect( addrlen, servaddr, sockfd: LONGINT): LONGINT;
 CONST  SOCKETCALL= 102;  SYSCONNECT= 3;
 CODE {SYSTEM.i386}
   MOV  EAX, SOCKETCALL
-  MOV  EBX, SYSCONNECT  
+  MOV  EBX, SYSCONNECT
   LEA  ECX, sockfd[ EBP]  (* address of connect parameters *)
   INT  80H
 END connect;
@@ -582,7 +581,7 @@ PROCEDURE -connect( addrlen, servaddr, sockfd: LONGINT): LONGINT;
 CONST  SOCKETCALL= 102;  SYSCONNECT= 3;
 CODE {SYSTEM.i386}
   MOV  EAX, SOCKETCALL
-  MOV  EBX, SYSCONNECT  
+  MOV  EBX, SYSCONNECT
   MOV  ECX, ESP  (* address of connect parameters (sockfd)*)
   INT  80H
 END connect;
@@ -600,7 +599,7 @@ CODE {SYSTEM.i386}
   PUSH  EDI
   MOV  EAX, IPC
   MOV  EBX, call[ EBP]
-  MOV  ECX, first[ EBP]    
+  MOV  ECX, first[ EBP]
   MOV  EDX, second[ EBP]
   MOV  ESI, third[ EBP]
   MOV  EDI, ptr[ EBP]
