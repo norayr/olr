@@ -1,18 +1,18 @@
 ETH Oberon / Linux X86 2015-12-11
-StackOrg  FF9A5E30
+StackOrg  FFE5E190
 08053CD8 Modules
 08051568 Files
 0804BEC8 Kernel
 08049198 Linux0
-Heap growing:  09B53000 0AB53000
+Heap growing:  08974000 09974000
 (GC 0ms CG)
 CmdLine: 1 ./olx
 OTRACE= not found
-09B64008 System
-09B69A28 FileDir
-09B6AE08 Objects
-09B70A88 Display
-09B797D8 Input
+08985008 System
+0898AA28 FileDir
+0898BE08 Objects
+08991A88 Display
+0899A7D8 Input
 TERM=xterm
 SSH_CONNECTION= not found
 XAUTHORITY=/u/inky/.Xauthority
@@ -23,45 +23,81 @@ OHEIGHT=1300
 00000085 BIG-REQUESTS success
 OSHM= not found
 00000082 MIT-SHM success
-09B7F518 Fonts
+089A0518 Fonts
 FontConv= not found
-09B815F8 Viewers
-09B83718 Reals
-09B85098 Texts
-09B8D2F8 Oberon
+089A25F8 Viewers
+089A4718 Reals
+089A6098 Texts
+089AE2F8 Oberon
 Color= not found
 MB= not found
-09B932B8 TextFrames
-09B9A208 MenuViewers
-09BA4F58 Script
-09BAA268 ScriptFrames
-09BB4628 Styles
-09BB9278 Printer
-09BBB1A8 Pictures
-09BBE028 Bitmaps
-09BD0668 Out
-09BD1FA8 Centronics
-09BD27B8 V24
+089B42B8 TextFrames
+089BB208 MenuViewers
+089C5F58 Script
+089CB268 ScriptFrames
+089D5628 Styles
+089DA278 Printer
+089DC1A8 Pictures
+089DF028 Bitmaps
+089F1668 Out
+089F2FA8 Centronics
+089F37B8 V24
 Default8.Scn.Fnt not present
 Warning: KeyState currently not implemented in Display.
+(GC 1ms CG)
+089FF078 XBrowser
+08A01728 OPM
+08A04A68 OPS
+08A08498 OPT
+08A148C8 OPV
+08A1B7E8 OPL
+08A454D8 OPO
+08A52EA8 OPC
 (GC 0ms CG)
 (GC 0ms CG)
-09BDE088 Edit
-09BE28A8 XCompiler
-09BE8B38 OPP
-09BF3E78 OPT
-09BFB528 OPS
-09BFDD08 OPM
-09C074F8 OPB
-09C11E98 OPA
-09C1A868 OPV
-09C21788 OPL
-09C4B478 OPO
-09C58E48 OPC
+08A65248 Edit
+XBrowser.Mod not present
+(GC 0ms CG)
+OLR not present
+(GC 0ms CG)
+OLR not present
+(GC 0ms CG)
+(GC 1ms CG)
+x86/RecType.Obj not present
+Modules: x86/RecType.Obj not found
+(GC 1ms CG)
+mremap:  00001000 00000001 08B94000
+mremap:  00002000 00000001 08B94000
+08A68F48 XCompiler
+08A6F118 OPP
+08A7A3B8 OPB
+08A84D58 OPA
 (GC 0ms CG)
 (GC 0ms CG)
+mremap:  00001000 00000001 08C26000
+mremap:  00002000 00000001 08C29000
+(GC 1ms CG)
+x86/Linux0Module.Obj not present
+(GC 1ms CG)
+mremap:  00001000 00000001 08C2D000
+(GC 1ms CG)
+(GC 1ms CG)
+(GC 1ms CG)
+08AFE698 XBrowser
+(GC 1ms CG)
+(GC 1ms CG)
+(GC 1ms CG)
+mremap:  00001000 00000001 08C3A000
+mremap:  00002000 00000001 08C3A000
+(GC 1ms CG)
+(GC 1ms CG)
+(GC 1ms CG)
+mremap:  00001000 00000001 08C4B000
+mremap:  00002000 00000001 08C4B000
+(GC 1ms CG)
 (GC 0ms CG)
+mremap:  00001000 00000001 08CBC000
+mremap:  00002000 00000001 08CBF000
+(GC 1ms CG)
+08A8E158 XBrowser
 (GC 0ms CG)
-mremap:  00001000 00000001 08BBC000
-(GC 0ms CG)
-Closing Display.
