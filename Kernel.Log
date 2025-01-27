@@ -1,18 +1,67 @@
 ETH Oberon / Linux X86 2015-12-11
-StackOrg  FFB4ABA0
+StackOrg  FF9A5E30
 08053CD8 Modules
 08051568 Files
 0804BEC8 Kernel
 08049198 Linux0
-Heap growing:  08BF1000 09BF1000
+Heap growing:  09B53000 0AB53000
 (GC 0ms CG)
 CmdLine: 1 ./olx
 OTRACE= not found
-08C02008 System
-08C07A28 FileDir
-08C08E08 Objects
-08C0EA88 Display
-08C177D8 Input
-TERM=linux
-Can't open '/dev/fb0'
-xfd: FFFFFFFE
+09B64008 System
+09B69A28 FileDir
+09B6AE08 Objects
+09B70A88 Display
+09B797D8 Input
+TERM=xterm
+SSH_CONNECTION= not found
+XAUTHORITY=/u/inky/.Xauthority
+DISPLAY=:0
+The X.Org Foundation
+OWIDTH=2000
+OHEIGHT=1300
+00000085 BIG-REQUESTS success
+OSHM= not found
+00000082 MIT-SHM success
+09B7F518 Fonts
+FontConv= not found
+09B815F8 Viewers
+09B83718 Reals
+09B85098 Texts
+09B8D2F8 Oberon
+Color= not found
+MB= not found
+09B932B8 TextFrames
+09B9A208 MenuViewers
+09BA4F58 Script
+09BAA268 ScriptFrames
+09BB4628 Styles
+09BB9278 Printer
+09BBB1A8 Pictures
+09BBE028 Bitmaps
+09BD0668 Out
+09BD1FA8 Centronics
+09BD27B8 V24
+Default8.Scn.Fnt not present
+Warning: KeyState currently not implemented in Display.
+(GC 0ms CG)
+(GC 0ms CG)
+09BDE088 Edit
+09BE28A8 XCompiler
+09BE8B38 OPP
+09BF3E78 OPT
+09BFB528 OPS
+09BFDD08 OPM
+09C074F8 OPB
+09C11E98 OPA
+09C1A868 OPV
+09C21788 OPL
+09C4B478 OPO
+09C58E48 OPC
+(GC 0ms CG)
+(GC 0ms CG)
+(GC 0ms CG)
+(GC 0ms CG)
+mremap:  00001000 00000001 08BBC000
+(GC 0ms CG)
+Closing Display.
