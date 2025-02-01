@@ -1,51 +1,17 @@
 ETH Oberon / Linux X86 2015-12-11
-StackOrg  FFD02410
-08053EF8 Modules
+StackOrg  FF952A40
+08053EF8 nModules
 08051788 Files
 0804C0E8 Kernel
 080491B8 Linux0
-Heap growing:  0A055000 0B055000
+Heap growing:  09131000 0A131000
 (GC 0ms CG)
-CmdLine: 1 ./olx
+CmdLine: 2 ./wishup test.a
 OTRACE= not found
-0A066008 System
-0A06BA28 FileDir
-0A06CE08 Objects
-0A072A88 Display
-0A07B7D8 Input
-TERM=xterm
-SSH_CONNECTION= not found
-XAUTHORITY=/u/inky/.Xauthority
-DISPLAY=:0
-The X.Org Foundation
-OWIDTH=2000
-OHEIGHT=1300
-00000085 BIG-REQUESTS success
-OSHM= not found
-00000082 MIT-SHM success
-0A081518 Fonts
-FontConv= not found
-0A0835F8 Viewers
-0A085718 Reals
-0A087098 Texts
-0A08F2F8 Oberon
-Color= not found
-MB= not found
-0A0952B8 TextFrames
-0A09C208 MenuViewers
-0A0A7058 Script
-0A0AC368 ScriptFrames
-0A0B6718 Styles
-0A0BB358 Printer
-0A0BD288 Pictures
-0A0C0108 Bitmaps
-0A0D2788 Out
-0A0D40C8 Centronics
-0A0D48D8 V24
-Default8.Scn.Fnt not present
-Warning: KeyState currently not implemented in Display.
-(GC 0ms CG)
-0A070128 Client
-0A078838 Internet
-(GC 0ms CG)
-(GC 0ms CG)
+091413C8 Shell
+09141A48 nOut
+091423F8 ooc2Strings
+091443E8 test
+09144978 nOberon
+091455D8 nTexts
+0914AD58 Reals
