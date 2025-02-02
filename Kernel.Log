@@ -1,17 +1,51 @@
 ETH Oberon / Linux X86 2015-12-11
-StackOrg  FF952A40
-08053EF8 nModules
+StackOrg  FFA9DAA0
+08053EF8 Modules
 08051788 Files
 0804C0E8 Kernel
 080491B8 Linux0
-Heap growing:  09131000 0A131000
+Heap growing:  09608000 0A608000
 (GC 0ms CG)
-CmdLine: 2 ./wishup test.a
+CmdLine: 1 ./olx
 OTRACE= not found
-091413C8 Shell
-09141A48 nOut
-091423F8 ooc2Strings
-091443E8 test
-09144978 nOberon
-091455D8 nTexts
-0914AD58 Reals
+09619008 System
+0961EA28 FileDir
+0961FE08 Objects
+09625A88 Display
+0962E7D8 Input
+TERM=xterm
+SSH_CONNECTION= not found
+XAUTHORITY=/u/inky/.Xauthority
+DISPLAY=:0
+The X.Org Foundation
+OWIDTH=2000
+OHEIGHT=1300
+00000085 BIG-REQUESTS success
+OSHM= not found
+00000082 MIT-SHM success
+09634518 Fonts
+FontConv= not found
+096365F8 Viewers
+09638718 Reals
+0963A098 Texts
+096422F8 Oberon
+Color= not found
+MB= not found
+096482B8 TextFrames
+0964F208 MenuViewers
+0965A058 Script
+0965F368 ScriptFrames
+09669718 Styles
+0966E358 Printer
+09670288 Pictures
+09673108 Bitmaps
+09685788 Out
+096870C8 Centronics
+096878D8 V24
+Default8.Scn.Fnt not present
+Warning: KeyState currently not implemented in Display.
+(GC 0ms CG)
+096932E8 Edit
+(GC 0ms CG)
+(GC 0ms CG)
+Closing Display.
