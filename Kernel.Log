@@ -1,51 +1,58 @@
 ETH Oberon / Linux X86 2015-12-11
-StackOrg  FFA9DAA0
+StackOrg  FFAF6C20
 08053EF8 Modules
 08051788 Files
 0804C0E8 Kernel
 080491B8 Linux0
-Heap growing:  09608000 0A608000
+Heap growing:  08DE2000 09DE2000
 (GC 0ms CG)
 CmdLine: 1 ./olx
 OTRACE= not found
-09619008 System
-0961EA28 FileDir
-0961FE08 Objects
-09625A88 Display
-0962E7D8 Input
+08DF3008 System
+08DF8A28 FileDir
+08DF9E08 Objects
+08DFFA88 Display
+08E087D8 Input
 TERM=xterm
 SSH_CONNECTION= not found
-XAUTHORITY=/u/inky/.Xauthority
+XAUTHORITY=/home/inky/.Xauthority
 DISPLAY=:0
 The X.Org Foundation
 OWIDTH=2000
-OHEIGHT=1300
+OHEIGHT=1550
 00000085 BIG-REQUESTS success
 OSHM= not found
 00000082 MIT-SHM success
-09634518 Fonts
+08E0E518 Fonts
 FontConv= not found
-096365F8 Viewers
-09638718 Reals
-0963A098 Texts
-096422F8 Oberon
+08E105F8 Viewers
+08E12718 Reals
+08E14098 Texts
+08E1C2F8 Oberon
 Color= not found
 MB= not found
-096482B8 TextFrames
-0964F208 MenuViewers
-0965A058 Script
-0965F368 ScriptFrames
-09669718 Styles
-0966E358 Printer
-09670288 Pictures
-09673108 Bitmaps
-09685788 Out
-096870C8 Centronics
-096878D8 V24
+08E222B8 TextFrames
+08E29208 MenuViewers
+08E340F8 Script
+08E39408 ScriptFrames
+08E437B8 Styles
+08E483F8 Printer
+08E4A328 Pictures
+08E4D1A8 Bitmaps
+08E5F828 Out
+08E61168 Centronics
+08E61978 V24
 Default8.Scn.Fnt not present
 Warning: KeyState currently not implemented in Display.
 (GC 0ms CG)
-096932E8 Edit
+08E6D5C8 Edit
+Linux0.Mod not present
+(GC 0ms CG)
+Modules: Linux0.Mod command not found
+(GC 0ms CG)
+(GC 1ms CG)
+(GC 0ms CG)
+(GC 0ms CG)
 (GC 0ms CG)
 (GC 0ms CG)
 Closing Display.
